@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-package com.example.group6_projectpart1
-
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.firebase.ui.database.FirebaseRecyclerOptions
-
-class MainAdapter(options: FirebaseRecyclerOptions<job>)
-    : FirebaseRecyclerAdapter<job, MainAdapter.MyViewHolder>(options) {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainAdapter.MyViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        return MyViewHolder(inflater,parent)
-    }
-
-    override fun onBindViewHolder(
-        holder: MainAdapter.MyViewHolder,
-        position: Int,
-        model: job
-    ) {
-
-        holder.title.text = model.Title
-        holder.description.text = model.name
-
-
-    }
-
-
-    class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup)
-        : RecyclerView.ViewHolder(inflater.inflate(R.layout.card,parent,false)){
-
-        val title: TextView = itemView.findViewById(R.id.title)
-        val description: TextView = itemView.findViewById(R.id.description)
-
-
-    }
-
-}
-=======
     package com.example.group6_projectpart1
     import android.util.Log
     import android.view.LayoutInflater
@@ -66,16 +24,16 @@ class MainAdapter(options: FirebaseRecyclerOptions<job>)
             position: Int,
             model: job
         ) {
-            val storageReference: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.PHOTO)
+            val storageReference: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.image)
             Glide.with(holder.itemView.context)
                 .load(storageReference)
                 .into(holder.imageView)
 
-            holder.title.text = model.TITLE
-            holder.description.text = model.NAME
+            holder.title.text = model.Title
+            holder.description.text = model.name
 
             // Debugging: Log data to check if it's being retrieved correctly
-            Log.d("MainAdapter", "Title: ${model.TITLE}, Name: ${model.NAME}, Photo: ${model.PHOTO}")
+            Log.d("MainAdapter", "Title: ${model.Title}, Name: ${model.name}, Photo: ${model.image}")
         }
 
         // Inner ViewHolder class
@@ -87,4 +45,4 @@ class MainAdapter(options: FirebaseRecyclerOptions<job>)
             val imageView: ImageView = itemView.findViewById(R.id.imageView)
         }
     }
->>>>>>> Project1
+

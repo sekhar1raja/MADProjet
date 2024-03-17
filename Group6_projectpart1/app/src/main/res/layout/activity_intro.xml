@@ -7,8 +7,6 @@
     tools:context=".Home"
     android:orientation="vertical">
 
-<<<<<<< HEAD
-=======
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -16,7 +14,6 @@
         android:textColor="@color/black"
         />
 
->>>>>>> Project1
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainRecycler"
         android:layout_width="match_parent"
