@@ -14,15 +14,31 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
+<<<<<<< HEAD
         val mainRecycler: RecyclerView = findViewById(R.id.mainRecycler)
 
         //update path
         val query = FirebaseDatabase.getInstance().reference.child("products")
         val options = FirebaseRecyclerOptions.Builder<job>().setQuery(query,job::class.java).build()
         adapter = MainAdapter(options)
+=======
+
+
+        val query = FirebaseDatabase.getInstance().reference.child("jobs")
+        val options = FirebaseRecyclerOptions.Builder<job>().setQuery(query,job::class.java).build()
+        adapter = MainAdapter(options)
+        val mainRecycler: RecyclerView = findViewById(R.id.mainRecycler)
+>>>>>>> Project1
 
         mainRecycler.layoutManager = LinearLayoutManager(this)
         mainRecycler.adapter = adapter;
 
+<<<<<<< HEAD
+=======
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        adapter?.stopListening()
+>>>>>>> Project1
     }
 }
