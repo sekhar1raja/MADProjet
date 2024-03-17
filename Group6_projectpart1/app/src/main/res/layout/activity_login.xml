@@ -3,27 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Login" android:orientation="vertical"
-    android:gravity="center"
-    android:layout_marginRight="20dp"
-    android:layout_marginLeft="20dp">
+    android:layout_width="320dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    app:circularflow_radiusInDP="20dp"
+    tools:context=".Login">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
         android:text="Login"
-        android:textStyle="bold"
         android:textSize="30dp"
-        android:layout_marginBottom="20dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:gravity="center_vertical"
         android:text="Enter Email"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/email"
@@ -34,12 +36,12 @@
         android:inputType="text" />
 
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_vertical"
         android:text="Enter Password"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/password"
@@ -50,24 +52,25 @@
         android:inputType="textPassword" />
 
     <Button
-        android:layout_marginTop="10dp"
         android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
+        android:layout_width="171dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:text="Login" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="New User ?  "
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/signup"
@@ -75,7 +78,7 @@
             android:layout_height="match_parent"
             android:text="Sign Up"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
